@@ -113,19 +113,6 @@ grid on;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function data_table = read_gsr_data(file_name)
 % Reads GSR data from a CSV file and returns a table
 % Input:

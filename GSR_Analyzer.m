@@ -114,8 +114,8 @@ grid on;
 subplot(6, 2, 11);
 plot(fear_matrix.TimeStamp, fear_matrix.GSRValue);
 hold on;
-scatter(fear_matrix.TimeStamp(fear_maxima), fear_matrix.GSRValue(fear_maxima), 'r', 'filled');
-scatter(fear_matrix.TimeStamp(fear_minima), fear_matrix.GSRValue(fear_minima), 'g', 'filled');
+scatter(fear_matrix.TimeStamp(fear_maxima), fear_matrix.GSRValue(fear_maxima), 'g', 'filled');
+scatter(fear_matrix.TimeStamp(fear_minima), fear_matrix.GSRValue(fear_minima), 'r', 'filled');
 hold off;
 title('Processed GSR Values with Local Maxima and Minima (Fear)');
 xlabel('Time');
@@ -126,8 +126,8 @@ grid on;
 subplot(6, 2, 12);
 plot(baseline_matrix.TimeStamp, baseline_matrix.GSRValue);
 hold on;
-scatter(baseline_matrix.TimeStamp(baseline_maxima), baseline_matrix.GSRValue(baseline_maxima), 'r', 'filled');
-scatter(baseline_matrix.TimeStamp(baseline_minima), baseline_matrix.GSRValue(baseline_minima), 'g', 'filled');
+scatter(baseline_matrix.TimeStamp(baseline_maxima), baseline_matrix.GSRValue(baseline_maxima), 'g', 'filled');
+scatter(baseline_matrix.TimeStamp(baseline_minima), baseline_matrix.GSRValue(baseline_minima), 'r', 'filled');
 hold off;
 title('Processed GSR Values with Local Maxima and Minima (Baseline)');
 xlabel('Time');
@@ -140,9 +140,10 @@ grid on;
 
 Fear_Index_Fear = calculate_fear_index(F1_Fear, F2_Fear, F3_Fear, F4_Fear, F5_Fear, F6_Fear, F7_Fear, F8_Fear, F9_Fear, F10_Fear);
 Fear_Index_Baseline = calculate_fear_index(F1_Baseline, F2_Baseline, F3_Baseline, F4_Baseline, F5_Baseline, F6_Baseline, F7_Baseline, F8_Baseline, F9_Baseline, F10_Baseline);
-disp('Fear Index: ');
+format longG;
+disp('Fear Index (Fearfull): ');
 disp(Fear_Index_Fear);
-disp('Baseline Index: ');
+disp('Fear Index (Baseline): ');
 disp(Fear_Index_Baseline);
 
 
